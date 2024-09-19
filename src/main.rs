@@ -20,7 +20,10 @@ fn main() -> eframe::Result {
     eframe::run_native(
         "eframe template",
         native_options,
-        Box::new(|cc| Ok(Box::new(eframe_template::TemplateApp::new(cc)))),
+        Box::new(|cc| {
+            egui_extras::install_image_loaders(&cc.egui_ctx);
+            Ok(Box::new(paint_jr::TemplateApp::new(cc)))
+        }),
     )
 }
 
@@ -37,7 +40,10 @@ fn main() {
             .start(
                 "the_canvas_id",
                 web_options,
-                Box::new(|cc| Ok(Box::new(eframe_template::TemplateApp::new(cc)))),
+                Box::new(|cc| {
+                    egui_extras::install_image_loaders(&cc.egui_ctx);
+                    Ok(Box::new(paint_jr::TemplateApp::new(cc)))
+                }),
             )
             .await;
 
