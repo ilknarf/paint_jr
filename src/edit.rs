@@ -81,11 +81,6 @@ impl Painter {
     }
 
     pub fn ui_files(&mut self, ui: &mut Ui) {
-        if let Some(rect) = &self.rect {
-            ui.label(format!("{:?}", rect));
-            ui.label(format!("{:?}", Rect::from_min_size(Pos2::ZERO, rect.square_proportions())));
-        }
-
         ui.horizontal(|ui| {
             // a simple button opening the dialog
             if ui.button("Open Image").clicked() {
