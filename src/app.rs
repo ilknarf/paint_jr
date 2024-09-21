@@ -102,7 +102,7 @@ impl<'a> eframe::App for TemplateApp {
             });
 
             ui.separator();
-            
+
             ui.horizontal(|ui| {
                 self.painter.ui_undo(ui);
                 self.painter.ui_redo(ui);
@@ -149,7 +149,7 @@ impl<'a> eframe::App for TemplateApp {
                 self.color,
             ));
 
-            self.painter.ui_content(ui);
+            self.painter.ui_content(ui, ctx);
         });
     }
 }

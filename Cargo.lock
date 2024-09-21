@@ -2153,6 +2153,7 @@ dependencies = [
  "log",
  "rfd",
  "serde",
+ "tiny-skia",
  "wasm-bindgen-futures",
  "web-sys",
 ]
