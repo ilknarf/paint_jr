@@ -1,6 +1,6 @@
 # Paint Jr.
 
-Janky picture editor for when you want to draw lines on things and then download them. Built using `eframe` and `egui`.
+Janky picture editor for when you want to draw lines on things and then download them. Built using [eframe](https://github.com/emilk/eframe_template) and `egui`.
 
 ## Known Issues
 - Line rendering:
